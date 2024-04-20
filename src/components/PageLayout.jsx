@@ -10,7 +10,7 @@ export default function PageLayout({ title, children }) {
         <Text
           fontSize="xl"
           sx={{ fontSize: '2rem' }}
-          color={colorMode === 'dark' ? 'green.300' : 'green.500'}
+          color={colorMode === 'dark' ? 'blue.300' : 'blue.400'}
         >
           {title}
         </Text>
