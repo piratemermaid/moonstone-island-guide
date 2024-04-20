@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import {
   Box,
   Button,
-  Flex,
+  Center,
   HStack,
   IconButton,
   useColorMode,
@@ -15,8 +15,8 @@ export default function NavBar() {
   const { toggleColorMode } = useColorMode();
 
   return (
-    <Flex>
-      <Box>
+    <>
+      <Center>
         <HStack>
           {ROUTES.map((route) => {
             return (
@@ -28,14 +28,15 @@ export default function NavBar() {
             );
           })}
         </HStack>
-      </Box>
-      <Box sx={{ position: 'absolute', right: 10 }}>
+      </Center>
+
+      <Box sx={{ position: 'absolute', top: 6, right: 6 }}>
         <IconButton
           aria-label="Toggle dark mode"
           onClick={toggleColorMode}
           icon={<MoonIcon />}
         />
       </Box>
-    </Flex>
+    </>
   );
 }
