@@ -6,24 +6,30 @@ import { useStore } from '../../store';
 
 const SIZE = 36;
 
-export default function Plot({ cropName }) {
-  const plannedCrops = useStore((state) => state.plannedCrops);
-  const togglePlannedCrop = useStore((state) => state.togglePlannedCrop);
+export default function Plot({ cropName, plotKey }) {
+  const plannedPlots = useStore((state) => state.plannedPlots);
+  const togglePlannedPlot = useStore((state) => state.togglePlannedPlot);
 
   const crop = CROPS.find((cropData) => cropData.name === cropName);
+
+  const handlePlotToggle = () => {
+    togglePlannedPlot(plotKey);
+  };
 
   return (
     <Center
       width={SIZE}
       height={crop.islandType === 'Aquatic' ? SIZE * 2 : SIZE}
+      onClick={handlePlotToggle}
+      sx={{ cursor: 'pointer' }}
     >
       <VStack spacing={0}>
         <Box>
           {cropName}
           <Checkbox
             colorScheme="orange"
-            isChecked={plannedCrops[cropName]}
-            onChange={() => togglePlannedCrop(cropName)}
+            isChecked={plannedPlots[plotKey]}
+            onChange={handlePlotToggle}
             sx={{ position: 'relative', top: 1, left: 2 }}
           />
         </Box>

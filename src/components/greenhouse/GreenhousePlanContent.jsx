@@ -6,54 +6,61 @@ import WaterPlot from './WaterPlot';
 import { useStore } from '../../store';
 
 export default function GreenhousePlanContent() {
-  const plannedCrops = useStore((state) => state.plannedCrops);
-  const setPlannedCrops = useStore((state) => state.setPlannedCrops);
+  const plannedPlots = useStore((state) => state.plannedPlots);
+  const setPlannedPlots = useStore((state) => state.setPlannedPlots);
 
   React.useEffect(() => {
-    if (Object.keys(plannedCrops).length < 1) {
-      setPlannedCrops({
-        Fuzzball: false,
-        Electricone: false,
-        Willowisp: false,
-        'Snowman Plant': false,
-        'Chilly Berry': false,
-        'Snowdrop Flower': false,
-        'Flag Flower': false,
-        Bulbshroom: false,
-        'Sweater Plant': false,
-        'Gift Plant': false,
-        'Snow Flobes': false,
-        Erdenleaf: false,
-        'Flake Flower': false,
+    if (Object.keys(plannedPlots).length < 1) {
+      setPlannedPlots({
+        water1: false,
+        water2: false,
+        water3: false,
+        water4: false,
+        soil1: false,
+        soil2: false,
+        soil3: false,
+        soil4: false,
+        soil5: false,
+        soil6: false,
+        soil7: false,
+        soil8: false,
+        soil9: false,
+        soil10: false,
+        soil11: false,
+        soil12: false,
+        soil13: false,
+        soil14: false,
+        soil15: false,
+        soil16: false,
       });
     }
   }, []);
 
   return (
     <Grid templateColumns="repeat(6, 1fr)" gap={4}>
-      <WaterPlot cropName="Fuzzball" />
-      <SoilPlot cropName="Electricone" />
-      <SoilPlot cropName="Willowisp" />
-      <SoilPlot cropName="Snowman Plant" />
-      <WaterPlot cropName="Chilly Berry" />
-      <SoilPlot cropName="Snowdrop Flower" />
+      <WaterPlot cropName="Fuzzball" plotKey="water2" />
+      <SoilPlot cropName="Electricone" plotKey="soil10" />
+      <SoilPlot cropName="Willowisp" plotKey="soil11" />
+      <SoilPlot cropName="Snowman Plant" plotKey="soil12" />
+      <WaterPlot cropName="Chilly Berry" plotKey="water4" />
+      <SoilPlot cropName="Snowdrop Flower" plotKey="soil16" />
 
-      <SoilPlot cropName="Grumpkin" />
-      <SoilPlot cropName="Crescent Plant" />
-      <SoilPlot cropName="Snowman Plant" />
-      <SoilPlot cropName="Snowdrop Flower" />
+      <SoilPlot cropName="Grumpkin" plotKey="soil7" />
+      <SoilPlot cropName="Crescent Plant" plotKey="soil8" />
+      <SoilPlot cropName="Snowman Plant" plotKey="soil9" />
+      <SoilPlot cropName="Snowdrop Flower" plotKey="soil15" />
 
-      <WaterPlot cropName="Flag Flower" />
-      <SoilPlot cropName="Bulbshroom" />
-      <SoilPlot cropName="Sweater Plant" />
-      <SoilPlot cropName="Gift Plant" />
-      <WaterPlot cropName="Snow Flobes" />
-      <SoilPlot cropName="Snowdrop Flower" />
+      <WaterPlot cropName="Flag Flower" plotKey="water1" />
+      <SoilPlot cropName="Bulbshroom" plotKey="soil4" />
+      <SoilPlot cropName="Sweater Plant" plotKey="soil5" />
+      <SoilPlot cropName="Gift Plant" plotKey="soil6" />
+      <WaterPlot cropName="Snow Flobes" plotKey="water3" />
+      <SoilPlot cropName="Snowdrop Flower" plotKey="soil14" />
 
-      <SoilPlot cropName="Erdenleaf" />
-      <SoilPlot cropName="Flake Flower" />
-      <SoilPlot cropName="Gift Plant" />
-      <SoilPlot cropName="Snowdrop Flower" />
+      <SoilPlot cropName="Erdenleaf" plotKey="soil1" />
+      <SoilPlot cropName="Flake Flower" plotKey="soil2" />
+      <SoilPlot cropName="Gift Plant" plotKey="soil3" />
+      <SoilPlot cropName="Snowdrop Flower" plotKey="soil13" />
     </Grid>
   );
 }
