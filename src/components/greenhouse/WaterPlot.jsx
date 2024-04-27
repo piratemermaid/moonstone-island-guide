@@ -1,5 +1,11 @@
-import { GridItem } from '@chakra-ui/react';
+import { GridItem, Text } from '@chakra-ui/react';
 
-export default function WaterPlot() {
-  return <GridItem rowSpan={2} bg="blue.400"></GridItem>;
+import Plot from './Plot';
+
+export default function WaterPlot({ cropName }) {
+  return (
+    <GridItem rowSpan={2} bg="blue.400">
+      <Plot cropName={cropName} />
+    </GridItem>
+  );
 }
