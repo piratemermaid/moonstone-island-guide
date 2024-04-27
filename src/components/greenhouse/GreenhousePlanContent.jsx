@@ -1,9 +1,34 @@
+import React from 'react';
 import { Grid } from '@chakra-ui/react';
 
 import SoilPlot from './SoilPlot';
 import WaterPlot from './WaterPlot';
+import { useStore } from '../../store';
 
 export default function GreenhousePlanContent() {
+  const plannedCrops = useStore((state) => state.plannedCrops);
+  const setPlannedCrops = useStore((state) => state.setPlannedCrops);
+
+  React.useEffect(() => {
+    if (Object.keys(plannedCrops).length < 1) {
+      setPlannedCrops({
+        Fuzzball: false,
+        Electricone: false,
+        Willowisp: false,
+        'Snowman Plant': false,
+        'Chilly Berry': false,
+        'Snowdrop Flower': false,
+        'Flag Flower': false,
+        Bulbshroom: false,
+        'Sweater Plant': false,
+        'Gift Plant': false,
+        'Snow Flobes': false,
+        Erdenleaf: false,
+        'Flake Flower': false,
+      });
+    }
+  }, []);
+
   return (
     <Grid templateColumns="repeat(6, 1fr)" gap={4}>
       <WaterPlot cropName="Fuzzball" />

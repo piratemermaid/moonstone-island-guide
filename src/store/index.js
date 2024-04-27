@@ -4,10 +4,17 @@ import { persist } from 'zustand/middleware';
 export const useStore = create(
   persist(
     (set, get) => ({
-      something: false,
-      toggleSomething: () => {
-        const something = get().something;
-        return set({ something: !something });
+      plannedCrops: {},
+      setPlannedCrops: (crops) => {
+        return set({ plannedCrops: crops });
+      },
+      togglePlannedCrop: (crop) => {
+        const plannedCrops = get().plannedCrops;
+        const newPlannedCrops = {
+          ...plannedCrops,
+          [crop]: !plannedCrops[crop],
+        };
+        return set({ plannedCrops: newPlannedCrops });
       },
     }),
     {
