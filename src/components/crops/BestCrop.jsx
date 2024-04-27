@@ -57,14 +57,14 @@ export default function BestCrop({ label, stat, isPositive = true }) {
             if (label !== 'Stamina') {
               if (stat !== 'stamina') {
                 return (
-                  <Text fontSize="sm" color="blue.100">
+                  <Text fontSize="sm" color="blue.100" key={stat}>
                     {stat} {stats[stat]}
                   </Text>
                 );
               }
             } else {
               return (
-                <Text fontSize="sm" color="blue.100">
+                <Text fontSize="sm" color="blue.100" key={stat}>
                   {stat} {stats[stat]}
                 </Text>
               );
