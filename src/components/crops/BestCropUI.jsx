@@ -1,7 +1,6 @@
-import { Card, CardBody, Center, Text } from '@chakra-ui/react';
+import { Box, Card, CardBody, Center, Text } from '@chakra-ui/react';
 
 import CROPS from '../../data/crops';
-import { useSeasonColor } from '../../styles/useStyleUtils';
 
 export default function BestCropUI({ label, stat, isPositive = true }) {
   const getBestCrop = () => {
@@ -31,7 +30,7 @@ export default function BestCropUI({ label, stat, isPositive = true }) {
   };
 
   const crop = getBestCrop();
-  const { name, season, winningStat } = crop;
+  const { name, winningStat, stats } = crop;
 
   return (
     <Card>
@@ -51,9 +50,27 @@ export default function BestCropUI({ label, stat, isPositive = true }) {
             style={{ width: 34, height: 34 }}
           />
         </Center>
-        <Text sx={{ color: useSeasonColor(season) }}>{season}</Text>
         <Text>Days: {crop.daysToGrow}</Text>
         <Text>Regrows: {crop.reharvest ? 'Y' : 'N'}</Text>
+        <Box>
+          {Object.keys(stats).map((stat) => {
+            if (label !== 'Stamina') {
+              if (stat !== 'stamina') {
+                return (
+                  <Text fontSize="sm" color="blue.100">
+                    {stat} {stats[stat]}
+                  </Text>
+                );
+              }
+            } else {
+              return (
+                <Text fontSize="sm" color="blue.100">
+                  {stat} {stats[stat]}
+                </Text>
+              );
+            }
+          })}
+        </Box>
       </CardBody>
     </Card>
   );

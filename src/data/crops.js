@@ -1,4 +1,5 @@
 const CROPS = [
+  ////// SPRING CROPS //////
   {
     name: 'Flax Flower',
     islandType: 'Earth',
@@ -61,6 +62,7 @@ const CROPS = [
       power: 3,
     },
   },
+  ////// SUMMER CROPS //////
   {
     name: 'Mossball',
     islandType: 'Earth',
@@ -173,7 +175,7 @@ const CROPS = [
     reharvest: false,
     stats: { stamina: 20, exp: 50, tame: 30 },
   },
-
+  ////// FALL CROPS //////
   {
     name: 'Applum',
     islandType: 'Earth',
@@ -277,6 +279,108 @@ const CROPS = [
     daysToGrow: 7,
     reharvest: true,
     stats: { stamina: 30, exp: 250 },
+  },
+  ////// WINTER CROPS //////
+  {
+    name: 'Crescent Plant',
+    islandType: 'Earth',
+    season: 'winter',
+    daysToGrow: 13,
+    stats: { stamina: 40, vitality: 5 },
+  },
+  {
+    name: 'Snowman Plant',
+    islandType: 'Earth',
+    season: 'winter',
+    daysToGrow: 12,
+    reharvest: true,
+    stats: { stamina: 40, hp: 50, vitality: 1 },
+  },
+  {
+    name: 'Chilly Berry',
+    islandType: 'Aquatic',
+    season: 'winter',
+    daysToGrow: 12,
+    stats: { stamina: 40, armor: 1, vitality: 1 },
+  },
+  {
+    name: 'Snow Flobes',
+    islandType: 'Aquatic',
+    season: 'winter',
+    daysToGrow: 12,
+    stats: { stamina: 80 },
+  },
+  {
+    name: 'Flake Flower',
+    islandType: 'Poison',
+    season: 'winter',
+    daysToGrow: 11,
+    stats: { stamina: -10, speed: -2, vitality: -2, power: -2, tame: 50 },
+  },
+  {
+    name: 'Saplant',
+    islandType: 'Poison',
+    season: 'winter',
+    daysToGrow: 13,
+    reharvest: true,
+    stats: { stamina: -10, speed: -5 },
+  },
+  {
+    name: 'Bulbshroom',
+    islandType: 'Electric',
+    season: 'winter',
+    daysToGrow: 12,
+    stats: { stamina: 40, speed: 3, power: 3 },
+  },
+  {
+    name: 'Popcorn Plant',
+    islandType: 'Electric',
+    season: 'winter',
+    daysToGrow: 12,
+    reharvest: true,
+    stats: { stamina: 40, armor: -1 },
+  },
+  {
+    name: 'Ruby Plant',
+    islandType: 'Fire',
+    season: 'winter',
+    daysToGrow: 14,
+    stats: { stamina: 40, speed: 2, vitality: 2, power: 2 },
+  },
+  {
+    name: 'Sweater Plant',
+    islandType: 'Fire',
+    season: 'winter',
+    daysToGrow: 14,
+    stats: { stamina: 40, armor: 3 },
+  },
+  {
+    name: 'Black Pearl',
+    islandType: 'Dark',
+    season: 'winter',
+    daysToGrow: 13,
+    stats: { stamina: 40, armor: -3, power: 5 },
+  },
+  {
+    name: 'Icicle Root',
+    islandType: 'Dark',
+    season: 'winter',
+    daysToGrow: 13,
+    stats: { stamina: 40, armor: 5, speed: -5, vitality: -5, power: -5 },
+  },
+  {
+    name: 'Gift Plant',
+    islandType: 'Psychic',
+    season: 'winter',
+    daysToGrow: 14,
+    stats: { stamina: 40, exp: 1000 },
+  },
+  {
+    name: 'Snowdrop Flower',
+    islandType: 'Psychic',
+    season: 'winter',
+    daysToGrow: 13,
+    stats: { stamina: 40, exp: 500, tame: 100 },
   },
 ];
 
