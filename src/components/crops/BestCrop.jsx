@@ -2,7 +2,7 @@ import { Box, Card, CardBody, Center, Text } from '@chakra-ui/react';
 
 import CROPS from '../../data/crops';
 
-export default function BestCropUI({ label, stat, isPositive = true }) {
+export default function BestCrop({ label, stat, isPositive = true }) {
   const getBestCrop = () => {
     let bestStat = 0;
     let bestCrop = null;
