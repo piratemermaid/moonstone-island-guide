@@ -7,6 +7,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 
+import CropImg from '../CropImg';
 import CROPS from '../../data/crops';
 import SEASONS from '../../data/seasons';
 
@@ -28,17 +29,7 @@ export default function CropsContent() {
                     <CardBody>
                       <VStack>
                         <Text>{crop.name}</Text>
-                        <img
-                          src={`/images/crops/${crop.name.replaceAll(
-                            ' ',
-                            ''
-                          )}.${
-                            crop.name === 'Spectre Flower' ? 'png' : 'webp'
-                          }`}
-                          alt={crop.name}
-                          title={crop.name}
-                          style={{ width: 34, height: 34 }}
-                        />
+                        <CropImg name={crop.name} />
                         <Text>Days: {crop.daysToGrow}</Text>
                         <Text>Regrows: {crop.reharvest ? 'Y' : 'N'}</Text>
                         <Box>

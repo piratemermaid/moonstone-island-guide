@@ -1,5 +1,6 @@
 import { Box, Card, CardBody, Center, Text } from '@chakra-ui/react';
 
+import CropImg from '../CropImg';
 import CROPS from '../../data/crops';
 
 export default function BestCrop({ label, stat, isPositive = true }) {
@@ -41,14 +42,7 @@ export default function BestCrop({ label, stat, isPositive = true }) {
         <Text>{name}</Text>
         <Text color="green.200">{winningStat}</Text>
         <Center>
-          <img
-            src={`/images/crops/${name.replaceAll(' ', '')}.${
-              name === 'Spectre Flower' ? 'png' : 'webp'
-            }`}
-            alt={name}
-            title={name}
-            style={{ width: 34, height: 34 }}
-          />
+          <CropImg name={name} />
         </Center>
         <Text>Days: {crop.daysToGrow}</Text>
         <Text>Regrows: {crop.reharvest ? 'Y' : 'N'}</Text>
