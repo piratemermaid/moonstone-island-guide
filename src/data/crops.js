@@ -52,6 +52,28 @@ const CROPS = [
     },
   },
   {
+    name: 'Mandrake',
+    islandType: 'Poison',
+    season: 'spring',
+    daysToGrow: 10,
+    reharvest: false,
+    stats: {
+      stamina: -10,
+      power: -3,
+    },
+  },
+  {
+    name: 'Nightshade',
+    islandType: 'Poison',
+    season: 'spring',
+    daysToGrow: 8,
+    reharvest: false,
+    stats: {
+      stamina: -10,
+      vitality: -3,
+    },
+  },
+  {
     name: 'Nimbus Plant',
     islandType: 'Electric',
     season: 'spring',
@@ -60,6 +82,73 @@ const CROPS = [
     stats: {
       stamina: 20,
       power: 3,
+    },
+  },
+  {
+    name: 'Fire Flower',
+    islandType: 'Fire',
+    season: 'spring',
+    daysToGrow: 6,
+    reharvest: false,
+    stats: {
+      stamina: 20,
+      tame: 30,
+    },
+  },
+  {
+    name: 'Hot Pepper',
+    islandType: 'Fire',
+    season: 'spring',
+    daysToGrow: 10,
+    reharvest: true,
+    stats: {
+      stamina: 20,
+      vitality: 3,
+    },
+  },
+  {
+    name: 'Bloodroot',
+    islandType: 'Dark',
+    season: 'spring',
+    daysToGrow: 7,
+    reharvest: false,
+    stats: {
+      stamina: 20,
+      speed: -5,
+      vitality: 5,
+    },
+  },
+  {
+    name: 'Spirit Bane',
+    islandType: 'Dark',
+    season: 'spring',
+    daysToGrow: 11,
+    reharvest: false,
+    stats: {
+      stamina: 20,
+      speed: -5,
+      power: 5,
+    },
+  },
+  {
+    name: 'Magic Mushroom',
+    islandType: 'Psychic',
+    season: 'spring',
+    daysToGrow: 7,
+    reharvest: false,
+    stats: {
+      stamina: 100,
+    },
+  },
+  {
+    name: 'Yarrow',
+    islandType: 'Psychic',
+    season: 'spring',
+    daysToGrow: 10,
+    reharvest: false,
+    stats: {
+      stamina: 20,
+      hp: 30,
     },
   },
   ////// SUMMER CROPS //////
@@ -271,6 +360,14 @@ const CROPS = [
     daysToGrow: 10,
     reharvest: true,
     stats: { stamina: 30, speed: -2, tame: 50 },
+  },
+  {
+    name: 'Ghostshroom',
+    islandType: 'Psychic',
+    season: 'fall',
+    daysToGrow: 10,
+    reharvest: true,
+    stats: { stamina: 30, hp: 100 },
   },
   {
     name: 'Willowisp',

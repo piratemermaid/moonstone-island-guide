@@ -41,13 +41,13 @@ export default function GreenhousePlanContent() {
       <WaterPlot cropName="Fuzzball" plotKey="water2" />
       <SoilPlot cropName="Electricone" plotKey="soil10" />
       <SoilPlot cropName="Willowisp" plotKey="soil11" />
-      <SoilPlot cropName="Snowman Plant" plotKey="soil12" />
+      <SoilPlot cropName="Ghostshroom" plotKey="soil12" />
       <WaterPlot cropName="Chilly Berry" plotKey="water4" />
       <SoilPlot cropName="Snowdrop Flower" plotKey="soil16" />
 
       <SoilPlot cropName="Grumpkin" plotKey="soil7" />
       <SoilPlot cropName="Crescent Plant" plotKey="soil8" />
-      <SoilPlot cropName="Snowman Plant" plotKey="soil9" />
+      <SoilPlot cropName="Ghostshroom" plotKey="soil9" />
       <SoilPlot cropName="Snowdrop Flower" plotKey="soil15" />
 
       <WaterPlot cropName="Flag Flower" plotKey="water1" />
